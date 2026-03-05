@@ -1,72 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhsina Dollar Somsa | Hot & Fresh</title>
+    <title>Muhsina Dollar Somsa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Menu section styles */
-        .menu-section {
-            padding: 60px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: var(--soft-cream);
-            min-height: 50vh;
-        }
-
-        .menu-title {
-            font-size: 3rem;
-            color: var(--hot-red);
-            margin-bottom: 40px;
-            text-align: center;
-            text-transform: uppercase;
-        }
-
-        .menu-image-container {
-            max-width: 900px;
-            width: 100%;
-            border: 8px solid var(--hot-red);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-            background-color: white;
-        }
-
-        .full-menu-img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        @media (max-width: 768px) {
-            .menu-title {
-                font-size: 2rem;
-            }
-            
-            .menu-image-container {
-                border-width: 5px;
-            }
-        }
-    </style>
 </head>
 <body>
 
-    <nav>
-        <div class="container">
-            <div class="logo-wrapper">
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
                 <img src="logo.jpeg" alt="Muhsina Logo" class="nav-logo-img">
-                <h1 class="logo"><span>Muhsina</span> Dollar Somsa</h1>
+                <div class="nav-logo-text">
+                    <span class="nav-brand">Muhsina</span>
+                    <span class="nav-sub">Dollar Somsa</span>
+                </div>
             </div>
-            
-            <div class="nav-right">
-                <div class="social-links">
-                    <a href="https://www.instagram.com/muhsina_dollar_somsa" target="_blank" class="insta-icon">
+            <div class="nav-links">
+                <a href="#menu" class="nav-link">Menyu</a>
+                <a href="#contact" class="nav-link">Aloqa</a>
+                <a href="#location" class="nav-link">Manzil</a>
+                <div class="nav-socials">
+                    <a href="https://www.instagram.com/muhsina_dollar_somsa" target="_blank" aria-label="Instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="https://t.me/muhsina_oshxonasi" target="_blank" class="tele-icon">
+                    <a href="https://t.me/muhsina_oshxonasi" target="_blank" aria-label="Telegram">
                         <i class="fa-brands fa-telegram"></i>
                     </a>
                 </div>
@@ -74,23 +38,309 @@
         </div>
     </nav>
 
-   
-
-    <section class="menu-section">
-        <h2 class="menu-title">Bizning Menu</h2>
-        
-        <div class="menu-image-container">
-            <img src="menu.jpg" alt="Muhsina Full Menu" class="full-menu-img">
-        </div>
-    </section>
-
+    <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h2>Xush kelibsiz</h2>
-            <p>Bu Muhsina Dollar Somsa</p>
-            <p>Murojaat uchun: <strong>+998 97-330-21-11</strong></p>
-            <p>Zakaz somsalar uchun: <strong>+998 98-000-06-04</strong></p>
+            <div class="hero-badge">Toshkent, O'zbekiston</div>
+            <h1 class="hero-title">
+                <span class="hero-title-main">Muhsina</span>
+                <span class="hero-title-sub">Dollar Somsa</span>
+            </h1>
+            <p class="hero-desc">Mazali va yangi tayyorlangan milliy taomlar</p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn-primary">Menyuni Ko'rish</a>
+                <a href="#contact" class="btn-secondary">Bog'lanish</a>
+            </div>
+        </div>
+        <div class="hero-scroll-hint">
+            <i class="fa-solid fa-chevron-down"></i>
         </div>
     </section>
+
+    <!-- Menu Gallery Section -->
+    <section class="menu-section" id="menu">
+        <div class="section-header">
+            <div class="section-tag">Bizning</div>
+            <h2 class="section-title">Menyu</h2>
+            <div class="section-divider">
+                <span></span><i class="fa-solid fa-star"></i><span></span>
+            </div>
+        </div>
+
+        <div class="menu-grid">
+            <div class="menu-card" onclick="openLightbox(0)">
+                <img src="assets/muxsina%20menu.pdf_20260301_230032_0001.png" alt="Menyu 1" loading="lazy">
+                <div class="menu-card-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="menu-card" onclick="openLightbox(1)">
+                <img src="assets/muxsina%20menu.pdf_20260301_230032_0002.png" alt="Menyu 2" loading="lazy">
+                <div class="menu-card-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="menu-card" onclick="openLightbox(2)">
+                <img src="assets/muxsina%20menu.pdf_20260301_230032_0003.png" alt="Menyu 3" loading="lazy">
+                <div class="menu-card-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="menu-card" onclick="openLightbox(3)">
+                <img src="assets/muxsina%20menu.pdf_20260301_230032_0004.png" alt="Menyu 4" loading="lazy">
+                <div class="menu-card-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="menu-card" onclick="openLightbox(4)">
+                <img src="assets/muxsina%20menu.pdf_20260301_230032_0005.png" alt="Menyu 5" loading="lazy">
+                <div class="menu-card-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="menu-card" onclick="openLightbox(5)">
+                <img src="assets/muxsina%20menu.pdf_20260301_230032_0006.png" alt="Menyu 6" loading="lazy">
+                <div class="menu-card-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="menu-card" onclick="openLightbox(6)">
+                <img src="assets/muxsina%20menu.pdf_20260301_230032_0007.png" alt="Menyu 7" loading="lazy">
+                <div class="menu-card-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="menu-card" onclick="openLightbox(7)">
+                <img src="assets/muxsina%20menu.pdf_20260301_230032_0008.png" alt="Menyu 8" loading="lazy">
+                <div class="menu-card-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="menu-card" onclick="openLightbox(8)">
+                <img src="assets/muxsina%20menu.pdf_20260301_230032_0009.png" alt="Menyu 9" loading="lazy">
+                <div class="menu-card-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="menu-card" onclick="openLightbox(9)">
+                <img src="assets/muxsina%20menu.pdf_20260301_230033_0010.png" alt="Menyu 10" loading="lazy">
+                <div class="menu-card-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="menu-card" onclick="openLightbox(10)">
+                <img src="assets/muxsina%20menu.pdf_20260301_230033_0011.png" alt="Menyu 11" loading="lazy">
+                <div class="menu-card-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="menu-card" onclick="openLightbox(11)">
+                <img src="assets/muxsina%20menu.pdf_20260301_230033_0012.png" alt="Menyu 12" loading="lazy">
+                <div class="menu-card-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="menu-card" onclick="openLightbox(12)">
+                <img src="assets/muxsina%20menu.pdf_20260301_230033_0013.png" alt="Menyu 13" loading="lazy">
+                <div class="menu-card-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="menu-card" onclick="openLightbox(13)">
+                <img src="assets/muxsina%20menu.pdf_20260301_230033_0014.png" alt="Menyu 14" loading="lazy">
+                <div class="menu-card-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="menu-card" onclick="openLightbox(14)">
+                <img src="assets/muxsina%20menu.pdf_20260301_230033_0015.png" alt="Menyu 15" loading="lazy">
+                <div class="menu-card-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="menu-card" onclick="openLightbox(15)">
+                <img src="assets/muxsina%20menu.pdf_20260301_230033_0016.png" alt="Menyu 16" loading="lazy">
+                <div class="menu-card-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="menu-card" onclick="openLightbox(16)">
+                <img src="assets/muxsina%20menu.pdf_20260301_230033_0017.png" alt="Menyu 17" loading="lazy">
+                <div class="menu-card-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="menu-card" onclick="openLightbox(17)">
+                <img src="assets/muxsina%20menu.pdf_20260301_230033_0018.png" alt="Menyu 18" loading="lazy">
+                <div class="menu-card-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="section-header light">
+            <div class="section-tag">Biz bilan</div>
+            <h2 class="section-title">Bog'laning</h2>
+            <div class="section-divider light">
+                <span></span><i class="fa-solid fa-star"></i><span></span>
+            </div>
+        </div>
+
+        <div class="contact-cards">
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="contact-card-body">
+                    <h3>Murojaat uchun</h3>
+                    <a href="tel:+998973302111">+998 97-330-21-11</a>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+                <div class="contact-card-body">
+                    <h3>Zakaz somsalar</h3>
+                    <a href="tel:+998980000604">+998 98-000-06-04</a>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
+                <div class="contact-card-body">
+                    <h3>Instagram</h3>
+                    <a href="https://www.instagram.com/muhsina_dollar_somsa" target="_blank">@muhsina_dollar_somsa</a>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fa-brands fa-telegram"></i></div>
+                <div class="contact-card-body">
+                    <h3>Telegram</h3>
+                    <a href="https://t.me/muhsina_oshxonasi" target="_blank">@muhsina_oshxonasi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location-section" id="location">
+        <div class="section-header">
+            <div class="section-tag">Bizni toping</div>
+            <h2 class="section-title">Manzil</h2>
+            <div class="section-divider">
+                <span></span><i class="fa-solid fa-star"></i><span></span>
+            </div>
+        </div>
+
+        <div class="location-wrapper">
+            <div class="location-details">
+                <div class="location-info-card">
+                    <div class="location-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="location-info-text">
+                        <h4>Manzil</h4>
+                        <p>Chinobod 2-mavze, 2<br>Toshkent, O'zbekiston</p>
+                    </div>
+                </div>
+                <div class="location-info-card">
+                    <div class="location-info-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div class="location-info-text">
+                        <h4>Ish vaqti</h4>
+                        <p>Har kuni: 08:00 – 22:00</p>
+                    </div>
+                </div>
+                <a href="https://yandex.com/maps/?text=Tashkent%2C+Chinobod+2nd+Drive%2C+2" class="location-map-btn" target="_blank">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    Yandex Maps'da ochish
+                </a>
+            </div>
+
+            <a class="location-map" href="https://yandex.com/maps/?text=Tashkent%2C+Chinobod+2nd+Drive%2C+2" target="_blank" aria-label="Yandex Maps'da ochish">
+                <div class="map-card-inner">
+                    <div class="map-pin-ring">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <p class="map-card-addr">Chinobod 2-mavze, 2<br>Toshkent, O'zbekiston</p>
+                    <span class="map-card-cta">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        Yandex Maps'da ochish
+                    </span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="logo.jpeg" alt="Logo">
+                <span>Muhsina Dollar Somsa</span>
+            </div>
+            <p class="footer-copy">&copy; 2025 Muhsina Dollar Somsa. Barcha huquqlar himoyalangan.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <button class="lightbox-close" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></button>
+        <button class="lightbox-prev" onclick="changeLightbox(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="Menu">
+        <button class="lightbox-next" onclick="changeLightbox(1)"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            nav.classList.toggle('scrolled', window.scrollY > 60);
+        });
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Lightbox
+        const images = [
+            'assets/muxsina%20menu.pdf_20260301_230032_0001.png',
+            'assets/muxsina%20menu.pdf_20260301_230032_0002.png',
+            'assets/muxsina%20menu.pdf_20260301_230032_0003.png',
+            'assets/muxsina%20menu.pdf_20260301_230032_0004.png',
+            'assets/muxsina%20menu.pdf_20260301_230032_0005.png',
+            'assets/muxsina%20menu.pdf_20260301_230032_0006.png',
+            'assets/muxsina%20menu.pdf_20260301_230032_0007.png',
+            'assets/muxsina%20menu.pdf_20260301_230032_0008.png',
+            'assets/muxsina%20menu.pdf_20260301_230032_0009.png',
+            'assets/muxsina%20menu.pdf_20260301_230033_0010.png',
+            'assets/muxsina%20menu.pdf_20260301_230033_0011.png',
+            'assets/muxsina%20menu.pdf_20260301_230033_0012.png',
+            'assets/muxsina%20menu.pdf_20260301_230033_0013.png',
+            'assets/muxsina%20menu.pdf_20260301_230033_0014.png',
+            'assets/muxsina%20menu.pdf_20260301_230033_0015.png',
+            'assets/muxsina%20menu.pdf_20260301_230033_0016.png',
+            'assets/muxsina%20menu.pdf_20260301_230033_0017.png',
+            'assets/muxsina%20menu.pdf_20260301_230033_0018.png',
+        ];
+        let currentIndex = 0;
+
+        function openLightbox(index) {
+            currentIndex = index;
+            document.getElementById('lightbox-img').src = images[index];
+            document.getElementById('lightbox-counter').textContent = `${index + 1} / ${images.length}`;
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(e) {
+            if (!e || e.target === document.getElementById('lightbox') || e.currentTarget.classList.contains('lightbox-close')) {
+                document.getElementById('lightbox').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function changeLightbox(dir) {
+            currentIndex = (currentIndex + dir + images.length) % images.length;
+            document.getElementById('lightbox-img').src = images[currentIndex];
+            document.getElementById('lightbox-counter').textContent = `${currentIndex + 1} / ${images.length}`;
+        }
+
+        document.addEventListener('keydown', e => {
+            const lb = document.getElementById('lightbox');
+            if (!lb.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') changeLightbox(-1);
+            if (e.key === 'ArrowRight') changeLightbox(1);
+        });
+
+        // Touch swipe for lightbox (mobile)
+        let touchStartX = 0;
+        const lb = document.getElementById('lightbox');
+        lb.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        lb.addEventListener('touchend', e => {
+            const diff = touchStartX - e.changedTouches[0].screenX;
+            if (Math.abs(diff) > 50) changeLightbox(diff > 0 ? 1 : -1);
+        }, { passive: true });
+
+        // Intersection Observer for fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.menu-card, .contact-card').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
