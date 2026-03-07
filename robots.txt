@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://dollar-somsa.uz/sitemap.xml
+
+# Block access to git and dev files
+Disallow: /.git/
+Disallow: /.vscode/
+Disallow: /.DS_Store

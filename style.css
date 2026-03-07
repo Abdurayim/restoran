@@ -652,6 +652,33 @@ footer {
 }
 
 /* ============================
+   IMAGE SKELETON / SHIMMER
+   ============================ */
+@keyframes shimmer {
+    0%   { background-position: -200% 0; }
+    100% { background-position:  200% 0; }
+}
+
+.menu-card.img-loading {
+    background: linear-gradient(
+        90deg,
+        var(--teal-dark) 25%,
+        rgba(26, 138, 154, 0.25) 50%,
+        var(--teal-dark) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.4s infinite linear;
+}
+
+.menu-card.img-loading img {
+    opacity: 0;
+}
+
+.menu-card img {
+    transition: opacity 0.3s ease;
+}
+
+/* ============================
    ANIMATIONS
    ============================ */
 @keyframes fadeUp {
